@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAppContext } from "@/context/AppContext";
 import { useContractContext } from "@/context/ContracProvider";
 import CompeteItem from "@/components/ui/compete";
-import { useAccount, use } from "wagmi";
+import { useAccount } from "wagmi";
 import { Zoom, toast } from "react-toastify";
 
 const competesList: CompeteList[] = [
