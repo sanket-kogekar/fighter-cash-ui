@@ -105,9 +105,15 @@ const FightItem = ({
         theme: "light",
         transition: Zoom,
       });
+    console.log("gameContractgameContract:", gameContract);
 
     try {
-      const betResult = await gameContract.placeBet(num, amount);
+      const betResult = await gameContract.placeBet(
+        // num,
+        amount * 10 ** 6,
+        amount!
+      );
+      // const betResult: any = await gameContract.placeBet(num, amount);
       const receipt: boolean = await betResult.wait();
 
       if (receipt) {
@@ -211,8 +217,16 @@ const FightItem = ({
     <Wrapper>
       <div className="game-control">
         <div className="fighter-info">
-          <p className="fighter-name">{name}</p>
-          <Image src={src} alt="No image..." width={220} height={180} />
+          <p className="fighter-name" style={{ fontSize: "25px" }}>
+            <b>{name}</b>
+          </p>
+          <Image
+            src={src}
+            alt="Fighter Image (temporary removed)"
+            width={340}
+            height={260}
+            style={{ borderRadius: "20px" }}
+          />
         </div>
         <div className="setting">
           <InputBox
@@ -222,31 +236,32 @@ const FightItem = ({
           />
           {isApprove ? (
             <MainBtn
-              title="Approve USDC to place your bet"
-              $width="290px"
+              title="Approve USDC to place bet"
+              $width="270px"
               onClick={handleApprove}
             />
           ) : (
             <MainBtn
               title={`Place Bet on ${name}`}
-              $width="230px"
+              $width="270px"
               onClick={handleBet}
             />
           )}
           <MainBtn
-            title={`WithDraw ${name}`}
-            $width="230px"
+            title={`Withdraw rewards`}
+            $width="270px"
             onClick={() => handleWithDraw}
           />
         </div>
       </div>
       <div className="bonus">
-        <p>
+        <p style={{ fontSize: "18px" }}>
           Your total bet amount: <span>{`$${totalBetAmount}`}</span>
         </p>
-        <p>
-          Potential gains if you win: <span>{`$${gain}`}</span>
-          {`[ check back later ]`}
+        <p style={{ fontSize: "18px" }}>
+          Potential gains if you win:{" "}
+          <span>{`$${gain > 1 ? gain / 10 ** 6 : gain}`}</span>
+          <span style={{ color: "green" }}>{` [ check back later ]`}</span>
         </p>
       </div>
     </Wrapper>

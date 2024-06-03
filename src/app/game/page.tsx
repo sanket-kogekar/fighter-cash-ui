@@ -9,7 +9,9 @@ const Game = () => {
   return (
     <Wrapper>
       <Navbar />
-      <h2>Fight Cash</h2>
+      <h2 style={{ fontSize: "55px" }}>
+        <b>Fighter Cash</b>
+      </h2>
       <div className="container">
         <div className="origin-bg"></div>
         <GameItem />

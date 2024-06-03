@@ -15,7 +15,7 @@ const ToggleNav = () => {
       <div className="close-icon" onClick={() => setToggled(!isToggled)}>
         <HiX size={30} />
       </div>
-      <h1>Fight Cash</h1>
+      <h1>Fighter Cash</h1>
       <div className="link-quest">
         <Link href="">How does this work?</Link>
         <Link href="">How can I trust you?</Link>

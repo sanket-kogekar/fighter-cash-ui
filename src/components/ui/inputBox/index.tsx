@@ -22,6 +22,7 @@ const InputBtn = ({
       max={chainBalance}
       value={amount}
       onChange={handleInputChange}
+      // width="280" //// does not work.
     />
   );
 };

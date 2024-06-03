@@ -13,8 +13,13 @@ const Navbar = () => {
   return (
     <>
       <Wrapper>
-        <Link href="">How does this work?</Link>
-        <Link href="">How can I trust you?</Link>
+        <Link href="https://docs.google.com/document/d/17DAZQjoCPPnzbFb-TR_-xw4LARPxZGLzBSibnY4UMq4/edit?usp=sharing">
+          Rules & Guidelines
+        </Link>
+        {/* <Link href="">How can I trust you?</Link> */}
+        <Link href="https://docs.google.com/document/d/1nkn5Z1-bu9iTbwDDt8DxwckedKGid52YbqdOeBL_9pM/edit?usp=sharing">
+          Terms & Conditions
+        </Link>
         <div className="connect-btn">
           <ConnectButton.Custom>
             {({

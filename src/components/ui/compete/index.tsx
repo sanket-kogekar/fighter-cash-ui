@@ -136,10 +136,15 @@ const CompeteItem = ({
         <h2>VS</h2>
         <div className="account-state">
           <div className="vs-amount">
-            <p>Total Pot Amount:</p>
+            <p style={{ fontSize: "20px" }}>Total Pot Amount:</p>
             <p>
-              <span className="state-bold">${totalPotAmount1}</span> vs{" "}
-              <span className="state-bold">${totalPotAmount2}</span>
+              <span className="state-bold" style={{ fontSize: "20px" }}>
+                ${totalPotAmount1}
+              </span>{" "}
+              vs{" "}
+              <span className="state-bold" style={{ fontSize: "20px" }}>
+                ${totalPotAmount2}
+              </span>
             </p>
           </div>
           <Link href="">Contract Link</Link>

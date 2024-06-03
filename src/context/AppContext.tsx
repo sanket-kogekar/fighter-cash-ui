@@ -34,7 +34,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (signer && provider) {
-      const contractAddress = "0x0a90D0FB21a9E7d0934f0A0475329f521d42Dd70"; // my contract address
+      const contractAddress = "0x4b39E6F2D8c6978Ad73808E9EfAF2a3493171A3c"; // my contract address
       const contractToken = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"; // my contract token
 
       const gameContractInstance = new ethers.Contract(
