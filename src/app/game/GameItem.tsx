@@ -104,8 +104,8 @@ const GameItem: React.FC = () => {
             <br />
             <b>
               <p
-                className="balance"
-                style={{ color: "red" }}
+                // className="balance"
+                style={{ color: "red", fontSize: "25px" }}
               >{`[ Switch To Polygon Network if you haven't ]`}</p>
             </b>
             <br />

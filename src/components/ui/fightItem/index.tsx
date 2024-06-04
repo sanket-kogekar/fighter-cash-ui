@@ -154,11 +154,11 @@ const FightItem = ({
   };
 
   /**
-   * @name handleWithDraw
+   * @name handleWithdraw
    * @param name
    * @returns none
    */
-  const handleWithDraw = async () => {
+  const handleWithdraw = async () => {
     console.log("Click the With Draw!");
     if (!gameContract)
       return toast("🔊 Again connect wallet!", {
@@ -248,9 +248,9 @@ const FightItem = ({
             />
           )}
           <MainBtn
-            title={`Withdraw rewards`}
+            title={`Withdraw Rewards`}
             $width="270px"
-            onClick={() => handleWithDraw}
+            onClick={() => handleWithdraw}
           />
         </div>
       </div>

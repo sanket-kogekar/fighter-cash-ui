@@ -147,7 +147,7 @@ const CompeteItem = ({
               </span>
             </p>
           </div>
-          <Link href="">Contract Link</Link>
+          <Link href="https://polygonscan.com">Contract Link</Link>
         </div>
       </div>
       <FightItem
