@@ -16,6 +16,12 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
   const [gameContract, setGameContract] = useState<ethers.Contract | null>(
     null
   );
+  const [gameContract2, setGameContract2] = useState<ethers.Contract | null>(
+    null
+  );
+  const [gameContract3, setGameContract3] = useState<ethers.Contract | null>(
+    null
+  );
   const [usdcContract, setUsdcContract] = useState<ethers.Contract | null>(
     null
   );
@@ -34,14 +40,30 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
 
   useEffect(() => {
     if (signer && provider) {
-      const contractAddress = "0x4b39E6F2D8c6978Ad73808E9EfAF2a3493171A3c"; // my contract address
+      const gameContractAddress = "0x2Dd932e0d15CDB1Ceaa0Ba97642fD8773850bEb6"; // my contract address
+
+      const gameContractAddress2 = "0x3023D0723afC5da3737c7EC475de59A73be1F6b6"; // my contract address
+      const gameContractAddress3 = "0x0fB59A5A7a267d558c75bC7c90B9728c6d2621A9"; // my contract address
+
       const contractToken = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"; // my contract token
 
       const gameContractInstance = new ethers.Contract(
-        contractAddress,
+        gameContractAddress,
         FightCashAbi,
         signer
       );
+
+      const gameContractInstance2 = new ethers.Contract(
+        gameContractAddress2,
+        FightCashAbi,
+        signer
+      );
+      const gameContractInstance3 = new ethers.Contract(
+        gameContractAddress3,
+        FightCashAbi,
+        signer
+      );
+
       const usdcContractInstance = new ethers.Contract(
         contractToken,
         MyUSDCAbi,
@@ -49,6 +71,10 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
       );
 
       setGameContract(gameContractInstance);
+
+      setGameContract2(gameContractInstance2);
+      setGameContract3(gameContractInstance3);
+
       setUsdcContract(usdcContractInstance);
     }
   }, [signer, provider]);
@@ -58,6 +84,8 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
       value={{
         isToggled,
         gameContract,
+        gameContract2,
+        gameContract3,
         usdcContract,
         setToggled,
       }}

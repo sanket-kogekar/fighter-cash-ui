@@ -19,13 +19,17 @@ const FightItem = ({
   getTotalBetData,
   getGain,
   getBalance,
+  gameContract,
 }: FightItemType) => {
   const [amount, setAmount] = useState<number>(0);
   const [isApprove, setApprove] = useState<boolean>(true);
 
   const { address } = useAccount();
 
-  const { usdcContract, gameContract } = useAppContext();
+  const {
+    usdcContract,
+    // gameContract
+  } = useAppContext();
 
   /**
    * @function handleApprove
@@ -93,6 +97,7 @@ const FightItem = ({
    * @returns none
    */
   const handleBet = async () => {
+    console.log("gameContractgameContract:", gameContract);
     if (!gameContract)
       return toast("🔊 Again connect wallet!", {
         position: "top-left",
@@ -105,13 +110,18 @@ const FightItem = ({
         theme: "light",
         transition: Zoom,
       });
-    console.log("gameContractgameContract:", gameContract);
+    console.log(
+      "gameContractgameContract:",
+      amount * 10 ** 6,
+      amount!,
+      gameContract
+    );
 
     try {
       const betResult = await gameContract.placeBet(
-        // num,
-        amount * 10 ** 6,
-        amount!
+        num,
+        amount * 10 ** 6
+        // amount!
       );
       // const betResult: any = await gameContract.placeBet(num, amount);
       const receipt: boolean = await betResult.wait();

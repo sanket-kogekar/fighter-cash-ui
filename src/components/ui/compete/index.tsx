@@ -10,10 +10,12 @@ const CompeteItem = ({
   data,
   chainBalance,
   getBalance,
+  gameContract,
 }: {
   data: CompeteList;
   chainBalance: number;
   getBalance: () => void;
+  gameContract: any;
 }) => {
   const [gain1, setGain1] = useState<number>(0);
   const [gain2, setGain2] = useState<number>(0);
@@ -24,7 +26,7 @@ const CompeteItem = ({
 
   const { isConnected, address, chainId } = useAccount();
 
-  const { gameContract } = useAppContext();
+  // const { gameContract } = useAppContext();
 
   useEffect(() => {
     if (isConnected && address) {
@@ -131,6 +133,7 @@ const CompeteItem = ({
         getTotalBetData={getTotalBetData}
         getGain={getGain}
         getBalance={getBalance}
+        gameContract={gameContract}
       />
       <div className="game-condition">
         <h2>VS</h2>
@@ -161,6 +164,7 @@ const CompeteItem = ({
         getTotalBetData={getTotalBetData}
         getGain={getGain}
         getBalance={getBalance}
+        gameContract={gameContract}
       />
     </Wrapper>
   );

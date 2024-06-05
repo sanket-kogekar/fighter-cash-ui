@@ -49,7 +49,8 @@ const GameItem: React.FC = () => {
 
   const { isConnected, address, chainId, chain } = useAccount();
 
-  const { usdcContract } = useAppContext();
+  const { usdcContract, gameContract, gameContract2, gameContract3 } =
+    useAppContext();
   const { setConnect } = useContractContext();
 
   useEffect(() => {
@@ -128,6 +129,13 @@ const GameItem: React.FC = () => {
             key={index}
             chainBalance={chainBalance}
             getBalance={getBalance}
+            gameContract={
+              index == 0
+                ? gameContract
+                : index == 1
+                ? gameContract2
+                : gameContract3
+            }
           />
         ))}
       </div>

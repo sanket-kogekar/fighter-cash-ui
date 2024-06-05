@@ -1,6 +1,8 @@
 interface AppContextType {
   isToggled: boolean;
   gameContract: ethers.Contract | null;
+  gameContract2: ethers.Contract | null;
+  gameContract3: ethers.Contract | null;
   usdcContract: ethers.Contract | null;
   setToggled: (state: boolean) => void;
 }
@@ -22,6 +24,7 @@ interface FightItemType {
   getTotalBetData: () => void;
   getGain: () => void;
   getBalance: () => void;
+  gameContract: any;
 }
 
 type Compete = {
