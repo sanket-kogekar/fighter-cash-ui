@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Wrapper } from "./index.styled";
 import Link from "next/link";
 import HeaderBtn from "@/components/ui/headerBtn";
@@ -10,13 +10,13 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Navbar = () => {
   const { isToggled, setToggled } = useAppContext();
-  const [hasConnected, setHasConnected] = useState(false);
+  // const [hasConnected, setHasConnected] = useState(false);
 
-  useEffect(() => {
-    if (hasConnected) {
-      window.location.reload();
-    }
-  }, [hasConnected]);
+  // useEffect(() => {
+  //   if (hasConnected) {
+  //     window.location.reload();
+  //   }
+  // }, [hasConnected]);
 
   return (
     <>
@@ -46,11 +46,11 @@ const Navbar = () => {
                 (!authenticationStatus ||
                   authenticationStatus === "authenticated");
 
-              useEffect(() => {
-                if (connected) {
-                  setHasConnected(true);
-                }
-              }, [connected]);
+              // useEffect(() => {
+              //   if (connected) {
+              //     setHasConnected(true);
+              //   }
+              // }, [connected]);
 
               return (
                 <div

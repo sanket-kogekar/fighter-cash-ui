@@ -4,6 +4,7 @@ import { useContractContext } from "@/context/ContracProvider";
 import CompeteItem from "@/components/ui/compete";
 import { useAccount } from "wagmi";
 import { Zoom, toast } from "react-toastify";
+import Link from "next/link";
 
 const competesList: CompeteList[] = [
   [
@@ -45,6 +46,7 @@ const competesList: CompeteList[] = [
 ];
 
 const GameItem: React.FC = () => {
+  // const twitterUrl = ;
   const [chainBalance, setBalance] = useState<number>(0);
 
   const { isConnected, address, chainId, chain } = useAccount();
@@ -166,9 +168,18 @@ const GameItem: React.FC = () => {
           />
         )} */}
       </div>
-      <p className="share-text">
+      {/* <Link href=`${https://twitter.com/intent/tweet?text=${encodeURIComponent("Love watching boxing or MMA fights? You can earn by predicting who will win. Visit Fighter.Cash and bet with USDC.")}`>
         Share the site with fight enthusiasts to increase the pot
-      </p>
+      </Link> */}
+      <Link
+        href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          "Love watching boxing or MMA fights? You can earn by predicting who wins. Visit Fighter.Cash and bet with USDC."
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Share the site with fight enthusiasts to increase the pot
+      </Link>
     </div>
   );
 };
