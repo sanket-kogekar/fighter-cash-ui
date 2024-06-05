@@ -258,10 +258,10 @@ const FightItem = ({
             />
           )}
           <span style={{ fontSize: "18px" }}>
-            [ Minimum Bet Allowed: <b>10 USDC</b> ]
+            [ Minimum Bet: <b>10 USDC</b> ]
           </span>
           <p style={{ fontSize: "20px" }}>
-            Your total bet amount:{" "}
+            Your total bet:{" "}
             <span>
               <b>{`$${totalBetAmount}`}</b>
             </span>

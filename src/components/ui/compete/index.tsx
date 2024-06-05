@@ -143,7 +143,7 @@ const CompeteItem = ({
         <h2>VS</h2>
         <div className="account-state">
           <div className="vs-amount">
-            <p style={{ fontSize: "23px" }}>Total Pot Amount:</p>
+            <p style={{ fontSize: "23px" }}>Total Pot</p>
             <p>
               <span className="state-bold" style={{ fontSize: "23px" }}>
                 ${totalPotAmount1}
