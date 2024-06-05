@@ -257,11 +257,11 @@ const FightItem = ({
               onClick={handleBet}
             />
           )}
-          <MainBtn
+          {/* <MainBtn
             title={`Withdraw Rewards`}
             $width="270px"
             onClick={() => handleWithdraw}
-          />
+          /> */}
         </div>
       </div>
       <div className="bonus">
@@ -271,8 +271,10 @@ const FightItem = ({
         <p style={{ fontSize: "18px" }}>
           Potential gains if you win:{" "}
           <span>{`$${gain > 1 ? gain / 10 ** 6 : gain}`}</span>
-          <span style={{ color: "green" }}>{` [ check back later ]`}</span>
         </p>
+        <span
+          style={{ color: "green", fontSize: "20px" }}
+        >{` [ check back later ]`}</span>
       </div>
     </Wrapper>
   );
