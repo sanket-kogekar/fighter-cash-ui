@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Wrapper } from "./index.styled";
 import Link from "next/link";
 import HeaderBtn from "@/components/ui/headerBtn";
@@ -6,7 +7,6 @@ import { useAppContext } from "@/context/AppContext";
 import ToggleNav from "@/components/ui/toggleNav";
 import Image from "next/image";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { isToggled, setToggled } = useAppContext();
@@ -24,7 +24,6 @@ const Navbar = () => {
         <Link href="https://docs.google.com/document/d/17DAZQjoCPPnzbFb-TR_-xw4LARPxZGLzBSibnY4UMq4/edit?usp=sharing">
           Rules & Guidelines
         </Link>
-        {/* <Link href="">How can I trust you?</Link> */}
         <Link href="https://docs.google.com/document/d/1nkn5Z1-bu9iTbwDDt8DxwckedKGid52YbqdOeBL_9pM/edit?usp=sharing">
           Terms & Conditions
         </Link>
@@ -39,8 +38,6 @@ const Navbar = () => {
               authenticationStatus,
               mounted,
             }) => {
-              // Note: If your app doesn't use authentication, you
-              // can remove all 'authenticationStatus' checks
               const ready = mounted && authenticationStatus !== "loading";
               const connected =
                 ready &&
@@ -48,6 +45,12 @@ const Navbar = () => {
                 chain &&
                 (!authenticationStatus ||
                   authenticationStatus === "authenticated");
+
+              useEffect(() => {
+                if (connected) {
+                  setHasConnected(true);
+                }
+              }, [connected]);
 
               return (
                 <div
