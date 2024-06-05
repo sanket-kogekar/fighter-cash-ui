@@ -22,24 +22,24 @@ const competesList: CompeteList[] = [
     {
       name: "Conor McGregor",
       src: "https://lezetomedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/09191713/Conor-McGregor-Net-Worth-scaled.jpg",
-      num: 3,
+      num: 1,
     },
     {
       name: "Michael Chandler",
       src: "https://mmajunkie.usatoday.com/wp-content/uploads/sites/91/2022/05/michael-chandler-ufc-274-ceremonial-weigh-ins.jpg",
-      num: 4,
+      num: 2,
     },
   ],
   [
     {
       name: "Khamzat Chimaev",
       src: "https://mmajunkie.usatoday.com/wp-content/uploads/sites/91/2019/09/chimaev-khamzat-1.jpeg?resize=640",
-      num: 5,
+      num: 1,
     },
     {
       name: "Robert Whittaker",
       src: "https://images.tapology.com/letterbox_images/17398/default/robert-whittaker-rising-to-the-top-interview-melbourne-112416_613229_OpenGraphImage.jpg",
-      num: 6,
+      num: 2,
     },
   ],
 ];
@@ -106,7 +106,7 @@ const GameItem: React.FC = () => {
             <b>
               <p
                 // className="balance"
-                style={{ color: "red", fontSize: "25px" }}
+                style={{ color: "red", fontSize: "22px" }}
               >{`[ Switch To Polygon Network if you haven't ]`}</p>
             </b>
             <br />
@@ -118,8 +118,8 @@ const GameItem: React.FC = () => {
         </div>
       </div>
       <br />
-      <p style={{ fontSize: "35px" }}>
-        <b>Active Bets</b>
+      <p style={{ fontSize: "32px" }}>
+        <b>Active Bets [ Minimum: 10 USDC ]</b>
       </p>
       <div className="compete-part">
         {competesList.map((item: Compete[], index: number) => (
@@ -138,6 +138,33 @@ const GameItem: React.FC = () => {
             }
           />
         ))}
+        {/* {competesList[0] && (
+          <CompeteItem
+            data={competesList[0]}
+            key={1}
+            chainBalance={chainBalance}
+            getBalance={getBalance}
+            gameContract={gameContract}
+          />
+        )}
+        {competesList[1] && (
+          <CompeteItem
+            data={competesList[1]}
+            key={2}
+            chainBalance={chainBalance}
+            getBalance={getBalance}
+            gameContract={gameContract2}
+          />
+        )}
+        {competesList[2] && (
+          <CompeteItem
+            data={competesList[2]}
+            key={3}
+            chainBalance={chainBalance}
+            getBalance={getBalance}
+            gameContract={gameContract}
+          />
+        )} */}
       </div>
       <p className="share-text">
         Share the site with fight enthusiasts to increase the pot

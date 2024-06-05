@@ -41,7 +41,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     if (signer && provider) {
       const gameContractAddress = "0x2Dd932e0d15CDB1Ceaa0Ba97642fD8773850bEb6"; // my contract address
-
       const gameContractAddress2 = "0x3023D0723afC5da3737c7EC475de59A73be1F6b6"; // my contract address
       const gameContractAddress3 = "0x0fB59A5A7a267d558c75bC7c90B9728c6d2621A9"; // my contract address
 
@@ -71,7 +70,6 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
       );
 
       setGameContract(gameContractInstance);
-
       setGameContract2(gameContractInstance2);
       setGameContract3(gameContractInstance3);
 
