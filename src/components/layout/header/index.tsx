@@ -6,9 +6,17 @@ import { useAppContext } from "@/context/AppContext";
 import ToggleNav from "@/components/ui/toggleNav";
 import Image from "next/image";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const { isToggled, setToggled } = useAppContext();
+  const [hasConnected, setHasConnected] = useState(false);
+
+  useEffect(() => {
+    if (hasConnected) {
+      window.location.reload();
+    }
+  }, [hasConnected]);
 
   return (
     <>
