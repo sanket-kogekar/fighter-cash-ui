@@ -257,6 +257,15 @@ const FightItem = ({
               onClick={handleBet}
             />
           )}
+          <span style={{ fontSize: "18px" }}>
+            [ Minimum Bet Allowed: <b>10 USDC</b> ]
+          </span>
+          <p style={{ fontSize: "20px" }}>
+            Your total bet amount:{" "}
+            <span>
+              <b>{`$${totalBetAmount}`}</b>
+            </span>
+          </p>
           {/* <MainBtn
             title={`Withdraw Rewards`}
             $width="270px"
@@ -264,18 +273,18 @@ const FightItem = ({
           /> */}
         </div>
       </div>
-      <div className="bonus">
-        <p style={{ fontSize: "18px" }}>
+      {/* <div className="bonus"> */}
+      {/* <p style={{ fontSize: "18px" }}>
           Your total bet amount: <span>{`$${totalBetAmount}`}</span>
-        </p>
-        <p style={{ fontSize: "18px" }}>
+        </p> */}
+      {/* <p style={{ fontSize: "18px" }}>
           Potential gains if you win:{" "}
           <span>{`$${gain > 1 ? gain / 10 ** 6 : gain}`}</span>
         </p>
         <span
           style={{ color: "green", fontSize: "20px" }}
-        >{` [ check back later ]`}</span>
-      </div>
+        >{` [ check back later ]`}</span> */}
+      {/* </div> */}
     </Wrapper>
   );
 };

@@ -62,6 +62,10 @@ const CompeteItem = ({
         theme: "light",
         transition: Zoom,
       });
+    console.log(
+      "gameContract, gameContract, gameContract",
+      gameContract.address
+    );
 
     const gainResult1 = await gameContract.userBets(address!, data[0].num);
     setGain1(gainResult1.toNumber() / 10 ** 6);
@@ -139,18 +143,26 @@ const CompeteItem = ({
         <h2>VS</h2>
         <div className="account-state">
           <div className="vs-amount">
-            <p style={{ fontSize: "20px" }}>Total Pot Amount:</p>
+            <p style={{ fontSize: "23px" }}>Total Pot Amount:</p>
             <p>
-              <span className="state-bold" style={{ fontSize: "20px" }}>
+              <span className="state-bold" style={{ fontSize: "23px" }}>
                 ${totalPotAmount1}
               </span>{" "}
-              vs{" "}
-              <span className="state-bold" style={{ fontSize: "20px" }}>
+              <span style={{ fontSize: "23px" }}>vs </span>
+              <span className="state-bold" style={{ fontSize: "23px" }}>
                 ${totalPotAmount2}
               </span>
             </p>
           </div>
-          <Link href="https://polygonscan.com">Contract Link</Link>
+          <p style={{ fontSize: "22px" }}>
+            <Link
+              // href="https://polygonscan.com/address/${}"
+              href={`https://polygonscan.com/address/${gameContract?.address}`}
+              target="_blank"
+            >
+              Contract Link
+            </Link>
+          </p>
         </div>
       </div>
       <FightItem
