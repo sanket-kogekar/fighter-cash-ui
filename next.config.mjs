@@ -13,6 +13,9 @@ const nextConfig = {
     domains: [
       "lezetomedia.s3.us-east-2.amazonaws.com",
       "mmajunkie.usatoday.com",
+      "www.sportsunfold.com",
+      "mmainsight.com",
+      "www.mmainsight.com",
       "cdn.cnn.com",
       "www.cheatsheet.com",
       // "cdni.russiatoday.com",

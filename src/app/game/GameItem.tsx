@@ -22,7 +22,9 @@ const competesList: CompeteList[] = [
   [
     {
       name: "Jake Paul",
-      src: "https://cdn.cnn.com/cnnnext/dam/assets/200131120529-jake-paul-logan-paul-super-tease.jpg",
+      // src: "https://cdn.cnn.com/cnnnext/dam/assets/200131120529-jake-paul-logan-paul-super-tease.jpg",
+      // src: "https://www.sportsunfold.com/wp-content/uploads/2022/07/pasted-image-0-2022-07-02T134401.378.png",
+      src: "https://mmainsight.com/wp-content/uploads/2021/07/jake-paul-boxing-696x464.jpg",
       num: 1,
     },
     {

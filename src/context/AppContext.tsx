@@ -42,7 +42,7 @@ const AppProvider = ({ children }: { children: React.ReactNode }) => {
     if (signer && provider) {
       const gameContractAddress = "0x3023D0723afC5da3737c7EC475de59A73be1F6b6"; // my contract address // Mcg Vs Chandler
       const gameContractAddress2 = "0x2Dd932e0d15CDB1Ceaa0Ba97642fD8773850bEb6"; // my contract address // Jake vs Mike Tyson
-      // const gameContractAddress3 = // KAMZHAT MATCH CANCELLED. "0x0fB59A5A7a267d558c75bC7c90B9728c6d2621A9"; // my contract address
+      const gameContractAddress3 = "0x0fB59A5A7a267d558c75bC7c90B9728c6d2621A9"; // my contract address
 
       const contractToken = "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174"; // my contract token
 
