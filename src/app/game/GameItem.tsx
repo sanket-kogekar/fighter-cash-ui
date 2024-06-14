@@ -9,18 +9,6 @@ import Link from "next/link";
 const competesList: CompeteList[] = [
   [
     {
-      name: "Jake Paul",
-      src: "https://cdn.cnn.com/cnnnext/dam/assets/200131120529-jake-paul-logan-paul-super-tease.jpg",
-      num: 1,
-    },
-    {
-      name: "Mike Tyson",
-      src: "https://www.cheatsheet.com/wp-content/uploads/2021/04/mike-tyson-9.jpg",
-      num: 2,
-    },
-  ],
-  [
-    {
       name: "Conor McGregor",
       src: "https://lezetomedia.s3.us-east-2.amazonaws.com/wp-content/uploads/2020/05/09191713/Conor-McGregor-Net-Worth-scaled.jpg",
       num: 1,
@@ -33,16 +21,28 @@ const competesList: CompeteList[] = [
   ],
   [
     {
-      name: "Khamzat Chimaev",
-      src: "https://mmajunkie.usatoday.com/wp-content/uploads/sites/91/2019/09/chimaev-khamzat-1.jpeg?resize=640",
+      name: "Jake Paul",
+      src: "https://cdn.cnn.com/cnnnext/dam/assets/200131120529-jake-paul-logan-paul-super-tease.jpg",
       num: 1,
     },
     {
-      name: "Robert Whittaker",
-      src: "https://images.tapology.com/letterbox_images/17398/default/robert-whittaker-rising-to-the-top-interview-melbourne-112416_613229_OpenGraphImage.jpg",
+      name: "Mike Tyson",
+      src: "https://www.cheatsheet.com/wp-content/uploads/2021/04/mike-tyson-9.jpg",
       num: 2,
     },
   ],
+  // [
+  //   {
+  //     name: "Khamzat Chimaev",
+  //     src: "https://mmajunkie.usatoday.com/wp-content/uploads/sites/91/2019/09/chimaev-khamzat-1.jpeg?resize=640",
+  //     num: 1,
+  //   },
+  //   {
+  //     name: "Robert Whittaker",
+  //     src: "https://images.tapology.com/letterbox_images/17398/default/robert-whittaker-rising-to-the-top-interview-melbourne-112416_613229_OpenGraphImage.jpg",
+  //     num: 2,
+  //   },
+  // ],
 ];
 
 const GameItem: React.FC = () => {
@@ -124,7 +124,7 @@ const GameItem: React.FC = () => {
         <b>Active Bets [ Minimum: 10 USDC ]</b>
       </p>
       <div className="compete-part">
-        {competesList.map((item: Compete[], index: number) => (
+        {/* {competesList.map((item: Compete[], index: number) => (
           // @ts-ignore
           <CompeteItem
             data={item}
@@ -139,8 +139,8 @@ const GameItem: React.FC = () => {
                 : gameContract3
             }
           />
-        ))}
-        {/* {competesList[0] && (
+        ))} */}
+        {competesList[0] && (
           <CompeteItem
             data={competesList[0]}
             key={1}
@@ -158,7 +158,7 @@ const GameItem: React.FC = () => {
             gameContract={gameContract2}
           />
         )}
-        {competesList[2] && (
+        {/*{competesList[2] && (
           <CompeteItem
             data={competesList[2]}
             key={3}
