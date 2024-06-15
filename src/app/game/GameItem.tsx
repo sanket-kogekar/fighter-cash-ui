@@ -123,7 +123,7 @@ const GameItem: React.FC = () => {
       </div>
       <br />
       <p style={{ fontSize: "32px" }}>
-        <b>Active Bets [ Minimum: 10 USDC ]</b>
+        <b>Active Bets [ Minimum: 1 USDC ]</b>
       </p>
       <div className="compete-part">
         {/* {competesList.map((item: Compete[], index: number) => (
