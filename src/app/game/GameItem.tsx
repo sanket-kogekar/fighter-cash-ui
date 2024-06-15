@@ -111,7 +111,7 @@ const GameItem: React.FC = () => {
               <p
                 // className="balance"
                 style={{ color: "red", fontSize: "22px" }}
-              >{`[ Connect To Polygon Chain if you haven't ]`}</p>
+              >{`[ Connect To Base Chain if you haven't ]`}</p>
             </b>
             <br />
           </div>
