@@ -157,7 +157,9 @@ const CompeteItem = ({
           <p style={{ fontSize: "22px" }}>
             <Link
               // href="https://polygonscan.com/address/${}"
-              href={`https://polygonscan.com/address/${gameContract?.address}`}
+              // href={`https://polygonscan.com/address/${gameContract?.address}`}
+              // target="_blank"
+              href={`https://basescan.org/address/${gameContract?.address}`}
               target="_blank"
             >
               Contract Link
