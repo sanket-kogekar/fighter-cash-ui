@@ -16,7 +16,12 @@ import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 const config = getDefaultConfig({
   appName: "My RainbowKit App",
   projectId: "YOUR_PROJECT_ID",
-  chains: [mainnet, polygon, polygonAmoy, optimism, arbitrum, base],
+  chains: [
+    //mainnet,
+    polygon,
+    //polygonAmoy, optimism, arbitrum,
+    base,
+  ],
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 
