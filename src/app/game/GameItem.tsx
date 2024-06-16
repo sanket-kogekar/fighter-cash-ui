@@ -111,7 +111,7 @@ const GameItem: React.FC = () => {
               <p
                 // className="balance"
                 style={{ color: "red", fontSize: "22px" }}
-              >{`[ Connect To Base Chain if you haven't ]`}</p>
+              >{`[ Connect To Base / Polygon Chain if you haven't ]`}</p>
             </b>
             <br />
           </div>
@@ -124,6 +124,10 @@ const GameItem: React.FC = () => {
       <br />
       <p style={{ fontSize: "32px" }}>
         <b>Active Bets [ Minimum: 1 USDC ]</b>
+      </p>
+      <p style={{ fontSize: "22px" }}>
+        {" "}
+        In case amounts look incorrect after changing network, just refresh!{" "}
       </p>
       <div className="compete-part">
         {/* {competesList.map((item: Compete[], index: number) => (

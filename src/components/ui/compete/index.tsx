@@ -159,7 +159,11 @@ const CompeteItem = ({
               // href="https://polygonscan.com/address/${}"
               // href={`https://polygonscan.com/address/${gameContract?.address}`}
               // target="_blank"
-              href={`https://basescan.org/address/${gameContract?.address}`}
+              href={
+                chainId === 8453
+                  ? `https://basescan.org/address/${gameContract?.address}`
+                  : `https://polygonscan.com/address/${gameContract?.address}`
+              }
               target="_blank"
             >
               Contract Link
